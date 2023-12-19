@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../css/animate.css/animate.min.css"/>
+
+    <title>我的作业之首页</title>
+
+</head>
+
+<body>
+<!-- 登录 -->
+<div class="login-form">
+    <form action="">
+        <div id="close-login-form" class="fas fa-times"></div>
+        <a href="#" class="logo mr-auto"> <i class="fas fa-mug-hot"></i> coffee </a>
+        <h3>let's start a new great day</h3>
+        <input type="email" name="" placeholder="enter your email" id="" class="box">
+        <input type="password" name="" placeholder="enter your password" id="" class="box">
+        <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+        </div>
+        <input value="login now" class="btn btn-primary" style="border-radius: 18px; margin-bottom: 5px">
+        <p class="account">don't have an account? <a href="#">create one!</a></p>
+    </form>
+</div>
+
+<!--导航栏-->
+    <nav>
+        <div class="container container-fluid">
+            <h1>JUST COFFEE</h1>
+    <!--        顶部栏-->
+            <div class="menu-bar">
+                <div class="toggle-btn"><i class="fas fa-bars"></i></div>
+                <ul id="menu">
+                    <li><a href="../page/index.html" class="active">首页</a></li>
+                    <li><a href="../page/menu.html">菜单</a></li>
+                    <li><a href="../page/service.html">服务</a></li>
+                    <li><a href="../page/contact.html">联系我们</a></li>
+                    <li id="login-btn" class="fas fa-user" style="font-size: large; color: white; margin-top: 10px; margin-left: 10px"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!--主题-->
+    <header class="overlay-bottom">
+        <div class="container">
+            <div class="hero-text">
+                <transition>
+                    <h1 class="animate__animated animate__slideInDown">Coffee</h1>
+                    <p style="font-size: 25px" class="animate__animated animate__slideInDown">* 我们将在2024年13月开业 *</p>
+                </transition>
+            </div>
+        </div>
+    </header>
+
+<!--    关于我们-->
+    <section class="about-us">
+        <div class="container">
+            <div class="title">
+                <h4>关于我们</h4>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>我们的故事</h3>
+                    <h5>我很喜欢喝咖啡所以决定开一家咖啡店，希望被认可和支持。</h5>
+                    <p>虽然目前还没有开这家咖啡店，但充满无限幻想和期待。</p>
+                    <a href="#" class="btn btn-primary">了解更多</a>
+                </div>
+
+<!--                中间的图片-->
+                <div class="col">
+                    <div class="image-inner">
+                        <img src="../img/about.png" alt="">
+                    </div>
+
+                </div>
+                <div class="col">
+                    <h3 >我们的宗旨</h3>
+                    <h5>顾客是上帝</h5>
+                    <p><i class="fas fa-check"></i> 让顾客满意</p>
+                    <p><i class="fas fa-check"></i> 让顾客满意</p>
+                    <p><i class="fas fa-check"></i> 让顾客满意</p>
+                    <a href="#" class="btn btn-primary">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--    我们的服务-->
+    <section class="services">
+        <div class="container">
+            <div class="title">
+                <h4>我们的服务</h4>
+                <h1>新鲜手磨咖啡</h1>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="box">
+                        <img src="../img/service-1.jpg" alt="">
+                    </div>
+                    <div class="box-text">
+                        <h3><i class="fas fa-truck"></i> 快速送货上门</h3>
+                        <p>快速送货上门，店长去自行车亲自送上门</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box">
+                        <img src="../img/service-2.jpg" alt="">
+                    </div>
+                    <div class="box-text">
+                        <h3><i class="fas fa-coffee"></i> 新鲜的咖啡豆</h3>
+                        <p>新鲜的咖啡豆，店长自己种植咖啡豆</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box">
+                        <img src="../img/service-3.jpg" alt="">
+                    </div>
+                    <div class="box-text">
+                        <h3><i class="fas fa-award"></i> 好品质的咖啡</h3>
+                        <p>咖啡会根据店长口味定制，制作店长爱喝的咖啡</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box">
+                        <img src="../img/service-4.jpg" alt="">
+                    </div>
+                    <div class="box-text">
+                        <h3><i class="fas fa-table"></i> 线上预定咖啡</h3>
+                        <p>我们计划计入美团或开设自己的线上小程序，为提供线上预定订购咖啡。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--    注册-->
+    <section class="offer overlay-top overlay-bottom">
+        <div class="container">
+            <h1>免费</h1>
+            <h2>全场免费的限定活动</h2>
+            <h3>店长生日当天限定活动，免费送，还没开店所以瞎说</h3>
+            <form action="#">
+                <div class="input-group">
+                    <input type="email" placeholder="你的邮箱" class="form-control">
+                    <button type="submit" class="btn btn-primary">注册</button>
+                </div>
+            </form>
+        </div>
+    </section>
+<!--   菜单-->
+    <section class="menu">
+        <div class="container">
+            <div class="title">
+                <h4>我们的菜单</h4>
+                <h1>价格超便宜的</h1>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="menu-box">
+                        <div class="menu-img">
+                            <img src="../img/menu-1.jpg" alt="">
+                            <h5 class="menu-price">$5</h5>
+                        </div>
+                        <div class="menu-details">
+                            <h3>美式咖啡</h3>
+                            <p>就是咖啡液加水，怕苦多加水</p>
+                        </div>
+                    </div>
+                    <div class="menu-box">
+                        <div class="menu-img">
+                            <img src="../img/menu-2.jpg" alt="">
+                            <h5 class="menu-price">$7</h5>
+                        </div>
+                        <div class="menu-details">
+                            <h3>拿铁咖啡</h3>
+                            <p>美式咖啡加了牛奶，如果你还要加糖的话</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="menu-box">
+                        <div class="menu-img">
+                            <img src="../img/menu-1.jpg" alt="">
+                            <h5 class="menu-price">$5</h5>
+                        </div>
+                        <div class="menu-details">
+                            <h3>美式咖啡</h3>
+                            <p>就是咖啡液加水，怕苦多加水</p>
+                        </div>
+                    </div>
+                    <div class="menu-box">
+                        <div class="menu-img">
+                            <img src="../img/menu-2.jpg" alt="">
+                            <h5 class="menu-price">$7</h5>
+                        </div>
+                        <div class="menu-details">
+                            <h3>拿铁咖啡</h3>
+                            <p>美式咖啡加了牛奶，如果你还要加糖的话</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </section>
+<!--线上订购-->
+    <section class="offer overlay-top overlay-bottom">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div>
+                        <h1>预定信息</h1>
+                        <h2>新店折扣，线上预定打折30%</h2>
+                    </div>
+                </div>
+                <div>
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="text" placeholder="姓名" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="电话" class="form-control">
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">预定</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--    顾客反馈-->
+    <section class="testimonials">
+        <div class="container">
+            <div class="title">
+                <h4>顾客反馈</h4>
+                <h1>顾客体验反馈</h1>
+            </div>
+            <div class="row swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="testimonial swiper-slide">
+                        <div class="testimonial-top">
+                            <img src="../img/testimonial-1.jpg" alt="">
+                            <div class="testimonial-info">
+                                <h3>张三</h3>
+                            </div>
+                        </div>
+                        <div class="testimonial-bottom">
+                            <p>这里咖啡真好喝</p>
+                        </div>
+                    </div>
+                    <div class="testimonial swiper-slide">
+                        <div class="testimonial-top">
+                            <img src="../img/testimonial-2.jpg" alt="">
+                            <div class="testimonial-info">
+                                <h3>李四</h3>
+                            </div>
+                        </div>
+                        <div class="testimonial-bottom">
+                            <p>喜欢爱喝还要来</p>
+                        </div>
+                    </div>
+                    <div class="testimonial swiper-slide">
+                        <div class="testimonial-top">
+                            <img src="../img/testimonial-3.jpg" alt="">
+                            <div class="testimonial-info">
+                                <h3>王五</h3>
+                            </div>
+                        </div>
+                        <div class="testimonial-bottom">
+                            <p>我要住在这里</p>
+                        </div>
+                    </div>
+                    <div class="testimonial swiper-slide">
+                        <div class="testimonial-top">
+                            <img src="../img/testimonial-4.jpg" alt="">
+                            <div class="testimonial-info">
+                                <h3>赵六</h3>
+                            </div>
+                        </div>
+                        <div class="testimonial-bottom">
+                            <p>是谁还没喝？不要再等了</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+<!--底部信息-->
+<footer class="overlay-top">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="box">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 中国 北京市 海淀区 123号路</li>
+                        <li><i class="fas fa-phone-alt"></i> +86 12345678</li>
+                        <li><i class="fas fa-envelope"></i> 123@example.com</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>营业时间</h3>
+                    <div>
+                        <h6>周一 —— 周四</h6>
+                        <p>1.00 PM - 3.00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="box">
+                    <h3>关注我们</h3>
+                    <p>我们的社交账号</p>
+                    <ul class="social-media">
+                        <li><i class="fab fa-twitter"></i></li>
+                        <li><i class="fab fa-facebook-f"></i></li>
+                        <li><i class="fab fa-instagram"></i></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>加入我们</h3>
+                    <p>我们正在招聘新的伙伴</p>
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="email" placeholder="你的邮箱" class="form-control">
+                            <button type="submit" class="btn btn-primary">发送</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="top" id="top">
+    <i class="fas fa-angle-double-up"></i>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../element-ui/lib/index.js"></script>
+    <script src="https://app.embed.im/snow.js" defer></script>
+    <script>
+        let loginForm = document.querySelector('.login-form');
+        document.querySelector('#login-btn').onclick = () =>{
+            loginForm.classList.add('active');
+        }
+        document.querySelector('#close-login-form').onclick = () =>{
+            loginForm.classList.remove('active');
+        }
+        let menu = document.querySelector('#menu-btn');
+        let navbar = document.querySelector('.header .nav');
+        menu.onclick = () =>{
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+        window.onscroll = () =>{
+            loginForm.classList.remove('active');
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+            if(window.scrollY > 0){
+                document.querySelector('.header').classList.add('active');
+            }else{
+                document.querySelector('.header').classList.remove('active');
+            }
+        }
+    </script>
+</body>
+
+</html>

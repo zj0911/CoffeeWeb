@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../css/animate.css/animate.min.css"/>
+
+    <title>我的作业之咖啡菜单</title>
+
+    <style>
+        .el-carousel__item h3 {
+            color: #475669;
+            font-size: 14px;
+            opacity: 0.75;
+            line-height: 200px;
+            margin: 0;
+        }
+
+        .el-carousel__item:nth-child(2n) {
+            background-color: #99a9bf;
+        }
+
+        .el-carousel__item:nth-child(2n+1) {
+            background-color: #d3dce6;
+        }
+
+        .el-row {
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .el-col {
+            border-radius: 4px;
+        }
+        .bg-purple-dark {
+            background: #99a9bf;
+        }
+        .bg-purple {
+            background: #d3dce6;
+        }
+        .bg-purple-light {
+            background: #e5e9f2;
+        }
+        .grid-content {
+            border-radius: 4px;
+            min-height: 36px;
+        }
+        .row-bg {
+            padding: 10px 0;
+            background-color: #f9fafc;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #33211D;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 登录 -->
+    <div class="login-form">
+        <form action="">
+            <div id="close-login-form" class="fas fa-times"></div>
+            <a href="#" class="logo mr-auto"> <i class="fas fa-mug-hot"></i> coffee </a>
+            <h3>let's start a new great day</h3>
+            <input type="email" name="" placeholder="enter your email" id="" class="box">
+            <input type="password" name="" placeholder="enter your password" id="" class="box">
+            <div class="flex">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+                <a href="#">forgot password?</a>
+            </div>
+            <input value="login now" class="btn btn-primary" style="border-radius: 18px; margin-bottom: 5px">
+            <p class="account">don't have an account? <a href="#">create one!</a></p>
+        </form>
+    </div>
+
+    <!--   菜单栏-->
+    <div style="width: 100%; margin-bottom: 20px">
+        <div style="background: #33211D; display: flex;">
+            <div>
+                <h1 style="color: white; margin: 30px">JUST COFFEE</h1>
+            </div>
+            <div style="display: flex; align-items: center; margin-left: 620px;">
+                <ul id="menu" style="list-style: none; padding: 0; margin: 0; font-size: 16px">
+                    <li style="display: inline-block; margin-right: 20px;"><a href="../page/index.html" style="color: white;">首页</a></li>
+                    <li style="display: inline-block; margin-right: 20px;"><a href="../page/menu.html" style="color: white;">菜单</a></li>
+                    <li style="display: inline-block; margin-right: 20px;"><a href="../page/service.html" style="color: white;">服务</a></li>
+                    <li style="display: inline-block; margin-right: 20px;"><a href="../page/contact.html" style="color:#DA9F5B;">联系我们</a></li>
+                    <div id="login-btn" class="fas fa-user" style="font-size: large; color: white"></div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--走马灯-->
+    <div id="app">
+        <el-carousel class="custom-carousel" :interval="4000"  height="300px" type="card">
+            <el-carousel-item v-for="(img, index) in images" :key="index">
+                <h3 class="medium"><img :src="img.src" alt="" style="width: 100%"></h3>
+            </el-carousel-item>
+        </el-carousel>
+    </div>
+
+<!--    宣传语-->
+    <div style="display: flex; justify-content: center; align-items: center; color: #33211D; margin:40px 0; flex-direction: column">
+        <div style="font-size: 22px;">我们始终致力于打造一家与众不同的咖啡</div>
+        <div style="font-size: 22px;">植根人文精神，心怀咖啡热忱</div>
+        <div style="font-size: 22px;">伙伴是我们的心跳</div>
+        <transition>
+            <div style="font-size: 36px; font-weight: bold" class="animate__animated animate__zoomInDown">加入我们</div>
+        </transition>
+    </div>
+
+<!--    服务信息-->
+    <div style="display: flex; justify-content: center; align-items: center; color: #33211D; margin: 40px 0; flex-direction: column;">
+        <div style="font-size: 36px; font-weight: bold; margin-bottom: 20px">我们提供的</div>
+        <div style="display: flex; justify-content: space-between; width: 80%;">
+            <div style="flex: 1; text-align: center;">
+                <div style="font-size: 24px;">
+                    <i class="el-icon-s-shop" style="font-size: 60px;"></i>
+                </div>
+                <div style="font-size: 18px;">零售门店</div>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <div style="font-size: 24px;">
+                    <i class="el-icon-coffee" style="font-size: 60px;"></i>
+                </div>
+                <div style="font-size: 18px;">咖啡培训</div>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <div style="font-size: 24px;">
+                    <i class="el-icon-present" style="font-size: 60px;"></i>
+                </div>
+                <div style="font-size: 18px;">丰厚待遇</div>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <div style="font-size: 24px;">
+                    <i class="el-icon-medal" style="font-size: 60px;"></i>
+                </div>
+                <div style="font-size: 18px;">专业认证</div>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <div style="font-size: 24px;">
+                    <i class="el-icon-s-custom" style="font-size: 60px;"></i>
+                </div>
+                <div style="font-size: 18px;">更多机会</div>
+            </div>
+        </div>
+    </div>
+
+<div style="display:flex; justify-content:center; align-items:center; color:#33211D; margin-top:50px; font-size: 36px; font-weight: bold">
+    我们一起点亮彼此
+</div>
+
+<section class="reservation overlay-top  overlay-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col col-1 ">
+                <div class="reserve-info">
+                    <h1>免费培训</h1>
+                    <p>期待你的加入，我们需要你</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 丰厚福利</li>
+                        <li><i class="fas fa-check"></i> 周末双休</li>
+                        <li><i class="fas fa-check"></i> 五险一金</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col col-2">
+                <h3>你的信息</h3>
+                <form action="#">
+                    <div class="form-group">
+                        <input type="text" placeholder="姓名" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="邮箱" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="电话" class="form-control">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">确定</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="container">
+        <div class="title">
+            <h4>伙伴反馈</h4>
+            <h1>伙伴经验反馈</h1>
+        </div>
+        <div class="row swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="testimonial swiper-slide">
+                    <div class="testimonial-top">
+                        <img src="../img/testimonial-1.jpg" alt="">
+                        <div class="testimonial-info">
+                            <h3>张三</h3>
+                        </div>
+                    </div>
+                    <div class="testimonial-bottom">
+                        <p>我享受咖啡带来的职业感和成就感，愿做有趣的咖啡匠人。</p>
+                    </div>
+                </div>
+                <div class="testimonial swiper-slide">
+                    <div class="testimonial-top">
+                        <img src="../img/testimonial-2.jpg" alt="">
+                        <div class="testimonial-info">
+                            <h3>李四</h3>
+                        </div>
+                    </div>
+                    <div class="testimonial-bottom">
+                        <p>热爱、钻研、分享所带来的快乐和不竭动力，让我从咖啡小白晋级为星级咖啡师。</p>
+                    </div>
+                </div>
+                <div class="testimonial swiper-slide">
+                    <div class="testimonial-top">
+                        <img src="../img/testimonial-3.jpg" alt="">
+                        <div class="testimonial-info">
+                            <h3>王五</h3>
+                        </div>
+                    </div>
+                    <div class="testimonial-bottom">
+                        <p>这一路对咖啡知识的学习和探索，赋予了我对职业感的认知——咖啡师是富含匠心的手艺人，更是充满热情的文化传播者。</p>
+                    </div>
+                </div>
+                <div class="testimonial swiper-slide">
+                    <div class="testimonial-top">
+                        <img src="../img/testimonial-4.jpg" alt="">
+                        <div class="testimonial-info">
+                            <h3>赵六</h3>
+                        </div>
+                    </div>
+                    <div class="testimonial-bottom">
+                        <p>这一路对咖啡知识的学习和探索，赋予了我对职业感的认知——咖啡师是富含匠心的手艺人，更是充满热情的文化传播者。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+
+<!--底部信息-->
+<footer class="overlay-top">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="box">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 中国 北京市 海淀区 123号路</li>
+                        <li><i class="fas fa-phone-alt"></i> +86 12345678</li>
+                        <li><i class="fas fa-envelope"></i> 123@example.com</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>营业时间</h3>
+                    <div>
+                        <h6>周一 —— 周四</h6>
+                        <p>1.00 PM - 3.00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="box">
+                    <h3>关注我们</h3>
+                    <p>我们的社交账号</p>
+                    <ul class="social-media">
+                        <li><i class="fab fa-twitter"></i></li>
+                        <li><i class="fab fa-facebook-f"></i></li>
+                        <li><i class="fab fa-instagram"></i></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>加入我们</h3>
+                    <p>我们正在招聘新的伙伴</p>
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="email" placeholder="你的邮箱" class="form-control">
+                            <button type="submit" class="btn btn-primary">发送</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="top" id="top">
+    <i class="fas fa-angle-double-up"></i>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
+<script src="../js/swiper-bundle.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            images: [
+                { src: '../img/contact-1.jpg' },
+                { src: '../img/contact-2.jpg' },
+                { src: '../img/contact-3.jpg' }
+            ]
+        }
+    });
+
+    let loginForm = document.querySelector('.login-form');
+    document.querySelector('#login-btn').onclick = () =>{
+        loginForm.classList.add('active');
+    }
+    document.querySelector('#close-login-form').onclick = () =>{
+        loginForm.classList.remove('active');
+    }
+    let menu = document.querySelector('#menu-btn');
+    let navbar = document.querySelector('.header .nav');
+    menu.onclick = () =>{
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('active');
+    }
+    window.onscroll = () =>{
+        loginForm.classList.remove('active');
+        menu.classList.remove('fa-times');
+        navbar.classList.remove('active');
+        if(window.scrollY > 0){
+            document.querySelector('.header').classList.add('active');
+        }else{
+            document.querySelector('.header').classList.remove('active');
+        }
+    }
+</script>
+</body>
+</html>

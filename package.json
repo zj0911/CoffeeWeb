@@ -1,0 +1,11 @@
+{
+  "name": "Coffe",
+  "version": "1.0.0",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "element-ui": "^2.15.14",
+    "swiper": "^11.0.5",
+    "vue": "^3.3.12",
+    "xxx": "^0.0.1"
+  }
+}
